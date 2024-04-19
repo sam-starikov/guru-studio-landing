@@ -195,7 +195,7 @@ a {
 }
 .header__content {
   position: relative;
-  background-image: url("./../img/header/cover.jpg");
+  background-image: url("./img/header/cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -395,7 +395,7 @@ a {
 }
 .ourworks {
   position: relative;
-  background-image: url("./../img/ourworks/cover.jpg");
+  background-image: url("./img/ourworks/cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -575,7 +575,7 @@ a {
           transform: translate(0, -5px) !important;
 }
 .ourservices__slide:nth-child(1) {
-  background-image: url("./../img/ourservices/1.jpg");
+  background-image: url("./img/ourservices/1.jpg");
 }
 .ourservices__slide:nth-child(2) {
   background-image: url("../../img/ourservices/2.jpg");
