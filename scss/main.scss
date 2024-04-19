@@ -1,0 +1,45 @@
+@import './base/reset';
+@import './base/vars';
+@import './base/mixins';
+@import './base/base';
+
+
+/* blocks */
+
+@import './blocks/header';
+@import './blocks/whoweare';
+@import './blocks/ourworks';
+@import './blocks/ourservices';
+
+/* components */
+
+@import './blocks/menu';
+@import './blocks/burger';
+@import './blocks/btn';
+@import './blocks/title';
+
+/* fonts */
+
+@font-face {
+	font-family: 'Fututra LT Book';
+	src: url(../fonts/FuturaLT-Book.woff2);
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Fututra LT Light';
+	src: url(../fonts/FuturaLT-Light.woff2);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Fututra LT Regular';
+	src: url(../fonts/FuturaLT.woff2);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'ft8b';
+	src: url(../fonts/ft8b-bold.ttf);
+	font-weight: 700;
+}

@@ -1,0 +1,11 @@
+.btn {
+	padding: 8px 20px;
+	border: 2px solid #075ad1;
+	transition: border-color $fast, color $fast;
+	cursor: pointer;
+
+	&:hover {
+		border-color: $orange_80;
+		color: $orange_80;
+	}
+}

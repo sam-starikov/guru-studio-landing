@@ -1,0 +1,41 @@
+body {
+	font-family: 'Fututra LT Regular', sans-serif;
+	font-size: clamp(1.125rem, 0.875rem + 1.25vw, 2rem);
+	font-weight: 400;
+	line-height: normal;
+	color: $white;
+	background-color: black;
+
+	/* 1440px / 100px
+		1vw = 14.4px
+		100px / 14.4px = 7vw
+	*/
+
+	// font-family:'Fututra LT Light' ;
+	// font-family:'Fututra LT Book' ;
+	// font-family: 'ft8b';
+}
+
+a {
+	display: block;
+	color: inherit;
+}
+
+.hidden {
+	display: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
