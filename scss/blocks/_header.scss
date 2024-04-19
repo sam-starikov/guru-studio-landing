@@ -1,119 +1,120 @@
 .header {
-	width: 100%;
-	background-color: $black_100;
-	font-size: 16px;
+    width: 100%;
+    background-color: $black_100;
+    font-size: 16px;
 
-	&__top {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		height: 90px;
-	}
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 90px;
+    }
 
-	&__logo {
-		&.header__logo_big {
-			margin-bottom: 165px;
+    &__logo {
+        &.header__logo_big {
+            margin-bottom: 165px;
 
-			.header__logo-img {
-				width: 203px;
-				height: 220px;
-			}
-		}
-	}
+            .header__logo-img {
+                width: 203px;
+                height: 220px;
+            }
+        }
+    }
 
-	&__logo-img {
-		width: 90px;
-		height: 62px;
-	}
+    &__logo-img {
+        width: 90px;
+        height: 62px;
+    }
 
-	&__menu {}
+    &__menu {
+    }
 
-	&__content-btn {
-		display: inline-block;
-		color: $black_100;
-		font-weight: 600;
-		padding: 15px 30px;
-		align-self: center;
-		border-radius: 30px;
-		background-color: $orange_100;
-		transition: color $fast, background-color $fast, border-radius $fast;
+    &__content-btn {
+        display: inline-block;
+        color: $black_100;
+        font-weight: 600;
+        padding: 15px 30px;
+        align-self: center;
+        border-radius: 30px;
+        background-color: $orange_100;
+        transition: color $fast, background-color $fast, border-radius $fast;
 
-		&:hover {
-			border-radius: 0;
-			color: $white;
-			background-color: $orange_80;
-		}
-	}
+        &:hover {
+            border-radius: 0;
+            color: $white;
+            background-color: $orange_80;
+        }
+    }
 
-	&__content {
-		position: relative;
-		background-image: url('./img/header/cover.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+    &__content {
+        position: relative;
+        background-image: url('../../img/header/cover.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.15);
-			filter: blur(20px);
-		}
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.15);
+            filter: blur(20px);
+        }
 
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: -1px;
-			right: 0;
-			width: 0;
-			height: 0;
-			border-top: 227px solid transparent;
-			border-right: 1440px solid black;
-		}
-	}
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 227px solid transparent;
+            border-right: 1440px solid black;
+        }
+    }
 
-	&__body {
-		position: relative;
-		z-index: 50;
-		padding: 130px 0;
-		display: flex;
-		flex-direction: column;
-		@include fluid(padding-bottom, 50px, 130px)
-	}
+    &__body {
+        position: relative;
+        z-index: 50;
+        padding: 130px 0;
+        display: flex;
+        flex-direction: column;
+        @include fluid(padding-bottom, 50px, 130px);
+    }
 
-	&__title {
-		font-size: 36px;
-		font-weight: 800;
-		margin-bottom: 50px;
-		max-width: 100%;
-		width: 745px;
-	}
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 50px;
+        max-width: 100%;
+        width: 745px;
+    }
 
-	&__burger {
-		position: relative;
-		z-index: 100;
-	}
+    &__burger {
+        position: relative;
+        z-index: 100;
+    }
 }
 
 /* media */
 
 @media (max-width: 768px) {
-	.header {
-		&__menu {
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 100;
-		}
+    .header {
+        &__menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
 
-		&__btn {
-			display: none;
-			visibility: hidden;
-		}
-	}
+        &__btn {
+            display: none;
+            visibility: hidden;
+        }
+    }
 }

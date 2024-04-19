@@ -116,10 +116,6 @@ body {
   line-height: normal;
   color: #fff;
   background-color: black;
-  /* 1440px / 100px
-  	1vw = 14.4px
-  	100px / 14.4px = 7vw
-  */
 }
 
 a {
@@ -199,7 +195,7 @@ a {
 }
 .header__content {
   position: relative;
-  background-image: url("/img/header/cover.jpg");
+  background-image: url("../../img/header/cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -399,7 +395,7 @@ a {
 }
 .ourworks {
   position: relative;
-  background-image: url("/img/ourworks/cover.jpg");
+  background-image: url("../../img/ourworks/cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
