@@ -1,128 +1,123 @@
 .ourworks {
-	position: relative;
-	background-image: url('/img/ourworks/cover.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: right;
+    position: relative;
+    background-image: url('./img/ourworks/cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
 
-	@include fluid(padding-top, 50px, 170px);
-	@include fluid(padding-bottom, 50px, 230px);
+    @include fluid(padding-top, 50px, 170px);
+    @include fluid(padding-bottom, 50px, 230px);
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.86);
-	}
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.86);
+    }
 
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: -1px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-top: 227px solid transparent;
-		border-right: 1440px solid black;
-	}
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 227px solid transparent;
+        border-right: 1440px solid black;
+    }
 
-	&__decor {
-		position: absolute;
-		top: -1px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-bottom: 170px solid transparent;
-		border-right: 1440px solid black;
-	}
+    &__decor {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 170px solid transparent;
+        border-right: 1440px solid black;
+    }
 
+    &__container {
+        position: relative;
+        z-index: 50;
+    }
 
-	&__container {
-		position: relative;
-		z-index: 50;
-	}
+    &__title {
+        text-align: center;
+        // margin-bottom: 105px;
+        @include fluid(margin-bottom, 50px, 105px);
+    }
 
-	&__title {
-		text-align: center;
-		// margin-bottom: 105px;
-		@include fluid(margin-bottom, 50px, 105px);
-	}
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        @include fluid(margin-bottom, 30px, 95px);
+    }
 
-	&__body {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 25px;
-		@include fluid(margin-bottom, 30px, 95px)
-	}
+    &__video {
+        position: relative;
+        transition: transform $slow;
+        font-size: 35px;
+        cursor: pointer;
 
-	&__video {
-		position: relative;
-		transition: transform $slow;
-		font-size: 35px;
-		cursor: pointer;
+        img {
+            width: 100%;
+        }
 
-		img {
-			width: 100%;
-		}
+        &:hover {
+            transform: scale(1.025);
+            color: $orange_100;
+        }
 
-		&:hover {
-			transform: scale(1.025);
-			color: $orange_100;
-		}
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            transition: color $slow;
+        }
+    }
 
-		&::before {
-			position: absolute;
-			top: 50%;
-			right: 50%;
-			transform: translate(50%, -50%);
-			transition: color $slow;
-		}
-	}
-
-	&__btn {
-		margin: 0 auto;
-		width: fit-content;
-		padding: 15px 20px;
-		text-align: center;
-	}
+    &__btn {
+        margin: 0 auto;
+        width: fit-content;
+        padding: 15px 20px;
+        text-align: center;
+    }
 }
 
 /* media */
 
-@media(max-width:992px) {
-	.ourworks {
+@media (max-width: 992px) {
+    .ourworks {
+        &__body {
+            grid-template-columns: 1fr 1fr;
+        }
 
-		&__body {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		&__video {
-			&:last-child {
-				grid-column: span 2;
-
-			}
-		}
-	}
+        &__video {
+            &:last-child {
+                grid-column: span 2;
+            }
+        }
+    }
 }
 
-@media(max-width:425px) {
-	.ourworks {
+@media (max-width: 425px) {
+    .ourworks {
+        &__body {
+            grid-template-columns: 1fr;
+        }
 
-		&__body {
-			grid-template-columns: 1fr;
-		}
-
-		&__video {
-			&:last-child {
-				grid-column: unset;
-
-			}
-		}
-	}
+        &__video {
+            &:last-child {
+                grid-column: unset;
+            }
+        }
+    }
 }
